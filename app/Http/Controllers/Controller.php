@@ -364,9 +364,9 @@ class Controller extends BaseController
             $phone = '966'.$phone;
 
         $client = new \GuzzleHttp\Client();
-        $username = "530090080";
-        $password = "mansour12";
-        $sender = "Code_SMS";
+        $username = USERNAME;
+        $password = PASSWORD;
+        $sender = SENDER;
 
         $sendUrl = "http://ultramsg.com/api.php?send_sms&username=".$username."&password=".$password."&numbers=".$phone."&sender=".$sender."&message=".$message."";
         $res = $client->request('GET', $sendUrl);
